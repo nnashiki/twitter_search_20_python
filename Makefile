@@ -11,6 +11,7 @@ sh:
 format:
 	isort src/*.py
 	black -l 100 src/*.py
+	mypy src/*.py
 
 init:
 	python3 -m venv venv

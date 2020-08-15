@@ -1,7 +1,7 @@
 import json
 
-from ratelimit import limits
-from twitter import OAuth2, Twitter
+from ratelimit import limits  # type: ignore
+from twitter import OAuth2, Twitter  # type: ignore
 
 BEARER_TOKEN = ""
 twitter = Twitter(auth=OAuth2(bearer_token=BEARER_TOKEN))
