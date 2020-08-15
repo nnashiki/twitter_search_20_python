@@ -1,2 +1,5 @@
 twitter
 ratelimit
+isort==4.3.21
+mypy
+black
