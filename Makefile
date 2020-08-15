@@ -8,9 +8,14 @@ update-dependencies:
 sh:
 	docker run -it --rm --entrypoint 'sh' twipy
 
+format:
+	isort src/*.py
+	black -l 100 src/*.py
+
 init:
 	python3 -m venv venv
 	(. venv/bin/activate && pip -U pip && pip install -r requirements.txt)
 
 run:
 	docker run -it --rm -v ${PWD}:/usr/app -w /usr/app twipy
+
