@@ -46,12 +46,28 @@ https://developer.twitter.com/en/docs/twitter-api/tweets/search/migrate
 
 ### standard API の制限(rate limit)に関して
 
+以下が存在
+
+- Tweets cap
+- call cap
+
+#### Tweets cap
+
 > *Recent search and filtered stream share a monthly Tweet cap limit of 500,000 Tweets. 
 
 https://developer.twitter.com/en/docs/twitter-api/rate-limits
 
 
+#### call cap
 
+https://developer.twitter.com/en/docs/twitter-api/rate-limits
+
+
+#### API 
+変わってしまっている....
+https://developer.twitter.com/en/docs/twitter-api/tweets/search/api-reference/get-tweets-search-recent
+
+## v1
 ### responseに関して
 
 data['search_metadata']

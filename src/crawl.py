@@ -15,9 +15,10 @@ for tweet_data in data["statuses"]:
 
 global_tweet = []
 FIFTEEN_MINUTES = 900
+RECENT_SEARCH_CALL_CAP_FOR_FIFTEEN_MINUTES = 180
 
 
-@limits(calls=15, period=FIFTEEN_MINUTES)
+@limits(calls=RECENT_SEARCH_CALL_CAP_FOR_FIFTEEN_MINUTES, period=FIFTEEN_MINUTES)
 def search(params):
     return twitter.search.tweets(**params)
 
