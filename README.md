@@ -7,6 +7,7 @@ Twitter API v2 を python で実行してみる
 - 認証
    - https://developer.twitter.com/en/docs/basics/getting-started
 
+## Twitter API v2 に関して
 2020/07に Twitter API v2 が登場し、developer portalも変更が加わったようです。  
 https://blog.twitter.com/developer/ja_jp/topics/tools/2020/NewTwitterAPI.html
 
@@ -18,11 +19,12 @@ https://qiita.com/kngsym2018/items/2524d21455aac111cdee
 `Consumer API Keys` は発行されていない。
 
 ### 認証に関して
-`Search Tweets`に使いたいので、OAuth 2.0 Bearer Token を使用します。  
-https://developer.twitter.com/en/docs/basics/authentication/overview
+`Search Tweets` を使いたいので、OAuth 2.0 Bearer Token を使用します。  
+https://developer.twitter.com/en/docs/authentication/overview
 
 ### Python client の選定に関して
-コミュニティで開発されている、`twitter` というクライアントがBearer Tokenに対応していたので、そちらを利用しました。
+コミュニティで開発されている、`twitter` というクライアントがBearer Tokenに対応していたので、そちらを利用しました。  
+内部で`Twitter API v2`が叩かれているかは確認していない。
 
 - https://github.com/sixohsix/twitter
 - https://developer.twitter.com/en/docs/developer-utilities/twitter-libraries
@@ -33,11 +35,19 @@ https://developer.twitter.com/en/docs/basics/authentication/overview
 https://developer.twitter.com/en/portal/register/playground
 
 ### Search API standard に関して
-The Twitter Search API searches against a sampling of recent Tweets published in the past 7 days.
+> The Twitter Search API searches against a sampling of recent Tweets published in the past 7 days.
+
 https://developer.twitter.com/en/docs/tweets/search/overview/standard
 
-### standard API の制限に関して
-https://developer.twitter.com/en/docs/basics/rate-limiting
+### recent search の新・旧の比較に関して
+https://developer.twitter.com/en/docs/twitter-api/tweets/search/migrate
+
+### standard API の制限(rate limit)に関して
+
+> *Recent search and filtered stream share a monthly Tweet cap limit of 500,000 Tweets. 
+
+https://developer.twitter.com/en/docs/twitter-api/rate-limits
+
 
 
 ### responseに関して
