@@ -51,6 +51,11 @@ https://developer.twitter.com/en/docs/twitter-api/tweets/search/migrate
 - Tweets cap
 - call cap
 
+1 call で取得できる最大は100。(APIリファレンスを参照)
+そのため、15分で最大 18, 000(100tweet * 180 call)を取得できる。
+1日に1回、maxを叩いたら 540000 (18000 * 30) なので、制限を超える可能性がある。
+制限を超えないように最大を取得するには、1日1回 17000 tweet(100tweet * 170 call) までに制限するのが良さそう。 
+
 #### Tweets cap
 
 > *Recent search and filtered stream share a monthly Tweet cap limit of 500,000 Tweets. 
