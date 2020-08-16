@@ -42,7 +42,7 @@ def main():
 
     tweet_count = 0
 
-    while 1 == 1:
+    while True:
         print("done")
         tweets = search(params)
         print(params)
