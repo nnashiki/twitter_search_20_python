@@ -13,18 +13,6 @@ for tweet_data in data["statuses"]:
     if "text" in tweet_data:
         print("\n" * 5 + tweet_data["text"])
 
-FIFTEEN_MINUTES = 900
-
-
-@limits(calls=15, period=FIFTEEN_MINUTES)
-def call_api(url):
-    response = requests.get(url)
-
-    if response.status_code != 200:
-        raise Exception("API response: {}".format(response.status_code))
-    return response
-
-
 global_tweet = []
 FIFTEEN_MINUTES = 900
 
@@ -36,7 +24,6 @@ def search(params):
 
 def main():
     search_word = "bigquery"
-    tweet_data = []
     immutable_params = {
         "q": search_word,
         "count": 100,
