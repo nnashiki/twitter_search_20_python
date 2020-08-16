@@ -42,6 +42,8 @@ https://developer.twitter.com/en/docs/tweets/search/overview/standard
 ### recent search の新・旧の比較に関して
 https://developer.twitter.com/en/docs/twitter-api/tweets/search/migrate
 
+`since_id (polling) until_id` を使うのは変わっていないみたい。
+
 ### standard API の制限(rate limit)に関して
 
 > *Recent search and filtered stream share a monthly Tweet cap limit of 500,000 Tweets. 
@@ -69,7 +71,7 @@ data['search_metadata']
 - データの取得の仕方としては、最新からからどんどん古いものにさかのぼっていく
    - next_resultsがあった存在した場合はより古いものが存在する。max_id=1291860773019385855を取得してパラメータとして渡してやる
 - count = 100は常に指定しておく
-- since_id: 指定したIDよりも新しい（つまり、指定したIDよりも古い）結果を返します。
+- since_id: 指定したIDよりも大きい(新しい)結果を返します。
 - max_id: 指定したID以下（つまり、指定したIDよりも古い）またはそれと同じIDの結果を返します。
 - include_entities: The entities node will not be included when set to false.
 
