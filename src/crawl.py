@@ -6,13 +6,6 @@ from twitter import OAuth2, Twitter  # type: ignore
 BEARER_TOKEN = ""
 twitter = Twitter(auth=OAuth2(bearer_token=BEARER_TOKEN))
 
-# Now work with Twitter
-data = twitter.search.tweets(q="bigquery", count=100)
-
-for tweet_data in data["statuses"]:
-    if "text" in tweet_data:
-        print("\n" * 5 + tweet_data["text"])
-
 global_tweet = []
 FIFTEEN_MINUTES = 900
 RECENT_SEARCH_CALL_CAP_FOR_FIFTEEN_MINUTES = 170
